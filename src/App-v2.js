@@ -1,6 +1,5 @@
 import NavBar from "./component/Structural Component/NavBar";
 import Main from "./component/Structural Component/Main";
-import tempMovieData from "../src/component/tempMovieData";
 import { useEffect, useState } from "react";
 import SearchBar from "./component/Presentation /SearchBar";
 import NumResult from "./component/Presentation /NumResult";
@@ -8,7 +7,6 @@ import Box from "./component/State/Box";
 import ListOfMovies from "./component/State/ListOfMovies";
 import WatchSummary from "./component/Presentation /WatchSummary";
 import WatchList from "./component/Presentation /WatchList";
-import tempWatchedData from "./component/temWatchedData";
 import Loader from "./component/Presentation /Loader";
 import ErrorMessage from "./component/Presentation /ErrorMessage";
 import MovieDetails from "./component/Presentation /MovieDetails";
@@ -21,28 +19,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
-  const tempQuery = "Blade";
-
-  /*
-
-  useEffect(function () {
-    console.log("After initial render");
-  }, []);
-
-  useEffect(function () {
-    console.log("After every render");
-  });
-
-  useEffect(
-    function () {
-      console.log("D");
-    },
-    [query]
-  );
-
-  console.log("During render");
-
-  */
 
   function handleSelectMovie(id) {
     setSelectedId((selectedId) => (id === selectedId ? null : id));
